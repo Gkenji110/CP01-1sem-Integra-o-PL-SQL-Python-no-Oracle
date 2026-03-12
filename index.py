@@ -5,12 +5,15 @@ import os
 app = Flask(__name__)
 
 def get_connection():
-    meu_dsn = oracledb.makedsn("oracle.fiap.com.br", 1521, service_name="orcl")
+    
+    user = os.getenv("DB_USER")
+    password = os.getenv("DB_PASSWORD")
+    dsn_string = os.getenv("DB_DSN")
 
     conn = oracledb.connect(
-        user="RM562745",
-        password="140101",
-        dsn=meu_dsn
+        user="user",
+        password="password",
+        dsn=dsn_string
     )
 
     return conn
