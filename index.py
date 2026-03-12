@@ -11,8 +11,8 @@ def get_connection():
     dsn_string = os.getenv("DB_DSN")
 
     conn = oracledb.connect(
-        user="user",
-        password="password",
+        user=user,
+        password=password,
         dsn=dsn_string
     )
 
