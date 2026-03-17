@@ -39,6 +39,7 @@ h3 {
 
 .event-buttons {
     display: flex;
+    align-items: center;
     justify-content: center;
     gap: 12px;
     margin-bottom: 20px;
@@ -55,6 +56,8 @@ h3 {
     cursor: pointer;
     transition: all 0.2s;
     backdrop-filter: blur(4px);
+    white-space: nowrap;
+    display: inline-block;
 }
 
 .btn-evento:hover {
